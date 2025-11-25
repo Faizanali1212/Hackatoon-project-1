@@ -803,6 +803,8 @@
             .custom-grid {
                 grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
                 grid-template-rows: auto;
+                display: flex;
+                flex-direction: column;
             }
             /* Reset specific spans for mobile */
             .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7 {
