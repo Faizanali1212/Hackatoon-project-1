@@ -717,12 +717,10 @@
             background-color: #ffffff;
             color: #333;
         }
-
-        /* Custom Grid for Desktop to match the image exactly */
         .custom-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(2, 200px); /* Two main rows */
+            grid-template-rows: repeat(2, 200px);
             gap: 16px;
             max-width: 1400px;
             margin: 0 auto;
@@ -746,18 +744,11 @@
             transform: scale(1.05);
         }
 
-        /* Specific placement based on the reference image 
-           Col 1-12 grid system
-        */
-
-        /* Left Side - Tall Shelf */
         .item-1 {
             grid-column: span 1; 
             grid-row: span 2; 
             height: 100%;
         }
-
-        /* Mid-Left - Desk & Chair */
         .item-2 {
             grid-column: span 4;
             grid-row: span 1;
@@ -766,23 +757,17 @@
             grid-column: span 2;
             grid-row: span 1;
         }
-        .item-3-spacer { /* Empty space placeholder if needed, or stretch item 3 */
-             /* Depending on image visual, item 3 seems small. 
-                We'll make item 3 span 2 cols, and leave 2 empty or fill with another?
-                Actually looking at image: Desk is wide. Below desk is Chair (left) and empty (right).
-             */
+        .item-3-spacer { 
              grid-column: span 2;
              grid-row: span 1;
         }
 
-        /* Center - Dining Room */
         .item-4 {
             grid-column: span 2;
-            grid-row: span 2; /* Tall vertical center */
-            margin-top: 40px; /* Offset to create that "uneven" look */
+            grid-row: span 2;
+            margin-top: 40px;
         }
 
-        /* Mid-Right - Bedroom & Frame */
         .item-5 {
             grid-column: span 3;
             grid-row: span 1;
@@ -792,21 +777,19 @@
             grid-row: span 1;
         }
 
-        /* Far Right - Kitchen */
         .item-7 {
             grid-column: span 2;
             grid-row: span 2;
         }
 
-        /* Mobile Responsive Adjustments */
         @media (max-width: 1024px) {
             .custom-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+                grid-template-columns: repeat(2, 1fr); 
                 grid-template-rows: auto;
                 display: flex;
                 flex-direction: column;
             }
-            /* Reset specific spans for mobile */
+
             .item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-7 {
                 grid-column: span 1;
                 grid-row: span 1;
@@ -814,13 +797,13 @@
                 margin-top: 0;
             }
             .item-2, .item-5 {
-                grid-column: span 2; /* Keep wide items wide */
+                grid-column: span 2; 
             }
         }
 
         @media (max-width: 640px) {
             .custom-grid {
-                grid-template-columns: 1fr; /* 1 column on mobile */
+                grid-template-columns: 1fr;
             }
             .item-2, .item-5 {
                 grid-column: span 1;
